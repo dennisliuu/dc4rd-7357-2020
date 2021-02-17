@@ -31,3 +31,5 @@ https://www.ibrahima-ndaw.com/blog/data-fetching-in-nextjs-using-useswr/
 Lazy load
 
 Componentwillunmount
+
+zeronet
