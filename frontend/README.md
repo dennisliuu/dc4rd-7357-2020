@@ -24,10 +24,13 @@ https://ptx.transportdata.tw/MOTC?t=Tourism&v=2#/
 
 - 請在文件內說明如何啟動
 
-只看效能，請求、避免 component rerender
+只看效能，請求、避免 component rerender consider `Componentwillunmount`
 
-https://www.ibrahima-ndaw.com/blog/data-fetching-in-nextjs-using-useswr/
+Reference:
+[1] https://sergiodxa.com/articles/swr/pagination#introducing-useswrpages
+[2] https://www.ibrahima-ndaw.com/blog/data-fetching-in-nextjs-using-useswr/
 
+<<<<<<< HEAD
 Lazy load
 
 Componentwillunmount
@@ -39,3 +42,6 @@ react router dom
 https://github.com/simbathesailor/react-infinite-scroll
 
 https://www.npmjs.com/package/react-infinite-scroll-component
+=======
+Plan to host on: zeronet
+>>>>>>> c0c35d6b628e90dc09dcb1850dc47c336c71b86a
