@@ -24,12 +24,10 @@ https://ptx.transportdata.tw/MOTC?t=Tourism&v=2#/
 
 - 請在文件內說明如何啟動
 
-只看效能，請求、避免 component rerender
+只看效能，請求、避免 component rerender consider `Componentwillunmount`
 
-https://www.ibrahima-ndaw.com/blog/data-fetching-in-nextjs-using-useswr/
+Reference:
+[1] https://sergiodxa.com/articles/swr/pagination#introducing-useswrpages
+[2] https://www.ibrahima-ndaw.com/blog/data-fetching-in-nextjs-using-useswr/
 
-Lazy load
-
-Componentwillunmount
-
-zeronet
+Plan to host on: zeronet
