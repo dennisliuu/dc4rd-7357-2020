@@ -7,4 +7,5 @@ Dcard 每天午夜都有大量使用者湧入抽卡，為了不讓伺服器過�
   - 如果超過限制的話就回傳 429 (Too Many Requests)
   - 可以使用各種資料庫達成
 
-嗷嗷待補...
+Base on express-rate-limit repo, just a trim down copy.
+Store ip, ramaining time / timestamp in memory
