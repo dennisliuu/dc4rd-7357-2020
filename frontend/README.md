@@ -27,6 +27,7 @@ https://ptx.transportdata.tw/MOTC?t=Tourism&v=2#/
 只看效能，請求、避免 component rerender consider `Componentwillunmount`
 
 Reference:
+
 [1] https://sergiodxa.com/articles/swr/pagination#introducing-useswrpages
 
 [2] https://www.ibrahima-ndaw.com/blog/data-fetching-in-nextjs-using-useswr/
