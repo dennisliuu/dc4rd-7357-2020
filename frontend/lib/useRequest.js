@@ -26,7 +26,7 @@ export const usePaginatePosts = (path) => {
 
 	const { data, error, size, setSize } = useSWRInfinite(
 		// (index) => `${url}?_page=${index + 1}&_limit=${PAGE_LIMIT}`,
-		(index) => `${url}?$skip=${index + 30}&$top=${PAGE_LIMIT}`,
+		(index) => `${url}?$skip=${index}&$top=${PAGE_LIMIT}`,
 		fetcher
 	);
 
