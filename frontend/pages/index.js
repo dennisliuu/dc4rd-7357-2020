@@ -11,7 +11,7 @@ export default function IndexPage() {
 		size,
 		setSize,
 		isReachingEnd,
-	} = usePaginatePosts("/posts");
+	} = usePaginatePosts("/ScenicSpot");
 
 	if (error) return <h1>Something went wrong!</h1>;
 	if (!posts) return <h1>Loading...</h1>;
