@@ -28,6 +28,7 @@ export default function IndexPage() {
 
 	return (
 		<div className="container">
+			< NavBar />
 			<h1>{router.query.id}</h1>
 			{posts.map((post) => (
 				<Post post={post} key={post.id} />

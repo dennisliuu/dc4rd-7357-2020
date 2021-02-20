@@ -2,6 +2,7 @@ import { usePaginatePosts } from "../lib/useRequest";
 import useOnScreen from "../lib/useOnScreen";
 import Post from "../components/Post";
 import React from "react";
+import NavBar from "../components/NavBar"
 
 export default function IndexPage() {
 	const {
@@ -25,6 +26,7 @@ export default function IndexPage() {
 
 	return (
 		<div className="container">
+			< NavBar />
 			<h1>My Posts</h1>
 			{posts.map((post) => (
 				<Post post={post} key={post.id} />
