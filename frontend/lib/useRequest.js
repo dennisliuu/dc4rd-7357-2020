@@ -16,19 +16,30 @@ const baseUrl = "https://ptx.transportdata.tw/MOTC/v2/Tourism"
 // 	return { posts, error };
 // };
 
+var cnt = 0;
+
 export const usePaginatePosts = (path) => {
 	if (!path) {
 		throw new Error("Path is required");
 	}
 
 	const url = baseUrl + path;
-	const PAGE_LIMIT = 30;
+	const PAGE_LIMIT = 15;
 
-	const { data, error, size, setSize } = useSWRInfinite(
-		// (index) => `${url}?_page=${index + 1}&_limit=${PAGE_LIMIT}`,
-		(index) => `${url}?$skip=${index}&$top=${PAGE_LIMIT}`,
-		fetcher
-	);
+	const getData = (pageIndex, previousPageData) => {
+		if (pageIndex === 0) return `${url}?$top=${PAGE_LIMIT}`;
+		if (previousPageData) {
+			let [first, , , , last] = previousPageData;
+			return `${url}?$skip=${PAGE_LIMIT * cnt++}&$top=${PAGE_LIMIT}`;
+		}
+	};
+
+	const { data, error, size, setSize } = useSWRInfinite(getData, fetcher);
+
+	// const { data, error, size, setSize } = useSWRInfinite(
+	// 	(index) => `${url}?$skip=${index}&$top=${PAGE_LIMIT}`,
+	// 	fetcher
+	// );
 
 	const posts = data ? [].concat(...data) : [];
 	const isLoadingInitialData = !data && !error;

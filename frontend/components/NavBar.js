@@ -46,7 +46,7 @@ const SpotLink = (props) => {
 const items = []
 
 for (const [index, value] of cities.entries()) {
-    items.push(<SpotLink id={value}>{value}</SpotLink>)
+    items.push(<SpotLink id={value} key={index}>{value}</SpotLink>)
 }
 
 const NavBar = () => {

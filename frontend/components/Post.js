@@ -1,10 +1,9 @@
 export default function Post({ post }) {
-	console.log(post);
-	const { Name, DescriptionDetail, Description, Phone } = post;
+	const { ID, Name, DescriptionDetail, Description, Phone } = post;
 	return (
-		<div className="Card">
+		<div className="Card" key={ID}>
 			<h1 className="Card--title">
-				{Name}. {DescriptionDetail}
+				{ID}. {Name}
 			</h1>
 			<p className="Card--body">{Description} Phone: {Phone}</p>
 		</div>
