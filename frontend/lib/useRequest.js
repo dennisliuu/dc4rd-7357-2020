@@ -2,19 +2,7 @@ import useSWR, { useSWRInfinite } from "swr";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-// const baseUrl = "https://jsonplaceholder.typicode.com";
 const baseUrl = "https://ptx.transportdata.tw/MOTC/v2/Tourism"
-
-// export const useGetPosts = (path) => {
-// 	if (!path) {
-// 		throw new Error("Path is required");
-// 	}
-
-// 	const url = baseUrl + path;
-// 	const { data: posts, error } = useSWR(url, fetcher);
-
-// 	return { posts, error };
-// };
 
 var cnt = 0;
 
@@ -35,11 +23,6 @@ export const usePaginatePosts = (path) => {
 	};
 
 	const { data, error, size, setSize } = useSWRInfinite(getData, fetcher);
-
-	// const { data, error, size, setSize } = useSWRInfinite(
-	// 	(index) => `${url}?$skip=${index}&$top=${PAGE_LIMIT}`,
-	// 	fetcher
-	// );
 
 	const posts = data ? [].concat(...data) : [];
 	const isLoadingInitialData = !data && !error;
