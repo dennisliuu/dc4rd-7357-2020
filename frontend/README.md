@@ -37,3 +37,10 @@ Reference:
 Just open terminal then type: `npm run start`
 
 And visit localhost:3000 and click the link on NavBar
+
+## Structure
+
+1. Page part: ScenicSpot.js
+    - Render all spot in main page
+2. lib park: useRequest
+    - Fetching data with swr, it helps to create cache and improve performance, since the original api is not provided page part, so i create a variable for computing the times of loading data
