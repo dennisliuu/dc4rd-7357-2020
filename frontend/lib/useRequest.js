@@ -12,7 +12,7 @@ export const usePaginatePosts = (path) => {
 	}
 
 	const url = baseUrl + path;
-	const PAGE_LIMIT = 15;
+	const PAGE_LIMIT = 30;
 
 	const getData = (pageIndex, previousPageData) => {
 		if (pageIndex === 0) return `${url}?$top=${PAGE_LIMIT}`;
