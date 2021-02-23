@@ -4,6 +4,13 @@ const StyleNavBar = {
 	margin: 10,
 	backgroundColor: "lightcoral",
 	border: "2px, dotted, #DDD",
+	position:"relative",
+	display:"flex",
+	"flex-wrap":"wrap",
+	"align-items":"center",
+	"justify-content":"space-between",
+	"padding-top":".5rem",
+	"padding-bottom":".5rem",
 };
 
 const StyleLink = {
