@@ -40,7 +40,11 @@ And visit localhost:3000 and click the link on NavBar
 
 ## Structure
 
-1. Page part: ScenicSpot.js
+1. Page part: ScenicSpot.js, [id].js
     - Render all spot in main page
+    - in [id].js, i use react route to pass the route name and get the city data.
 2. lib park: useRequest
     - Fetching data with swr, it helps to create cache and improve performance, since the original api is not provided page part, so i create a variable for computing the times of loading data
+3. Components: Navbar.js and Post.js
+    - Create a navbar to nav
+    - Create a Post component to render spot 
